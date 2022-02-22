@@ -33,7 +33,7 @@ class TestFavorite():
     
     def test_edit_note(self):
         airport_id = self._get_first_favorite()
-        query = {'note' : 'Edit catatan yah boskuh'}
+        query = {'note' : 'Edit catatan yah'}
         response = requests.patch(f"{self.url}/{airport_id}", headers=self.auth, params=query)
 
         assert_that(response.status_code).is_equal_to(200)
